@@ -17,10 +17,16 @@ form.addEventListener("submit", (event) => {
   button.className = "delete-btn";
 
   button.addEventListener("click", () => {
-    if (confirm("Delete this note?")) {
-      item.remove();
-    }
-  });
+  if (confirm(`Delete "${note}"?`)) {
+    item.remove();
+  }
+});
+
+//   button.addEventListener("click", () => {
+//     if (confirm("Delete this note?")) {
+//       item.remove();
+//     }
+//   });
 
   item.append(text, button);
   list.appendChild(item);
